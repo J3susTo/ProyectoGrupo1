@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inteligencia Artificial I</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="css/images/logo1.jpg" type="image/x-icon">
+</head>
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Hacer una solicitud AJAX al archivo PHP que gestiona el contador
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "contador.php", true); // Asegúrate de que el archivo contador.php está en el mismo directorio
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    // Mostrar el número de visitas en el elemento con id "contador"
+                    document.getElementById("contador").textContent = xhr.responseText;
+                }
+            };
+            xhr.send();
+        });
+                // Bloquear clic derecho
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        // Bloquear F12 y combinaciones de teclas
+        document.addEventListener('keydown', function(e) {
+            // Bloquear F12
+            if (e.key === 'F12') {
+                e.preventDefault();
+            }
+
+            // Bloquear Ctrl+Shift+I o Ctrl+Shift+C (inspeccionar)
+            if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'C')) {
+                e.preventDefault();
+            }
+
+            // Bloquear Ctrl+U (ver código fuente)
+            if (e.ctrlKey && e.key === 'U') {
+                e.preventDefault();
+            }
+        });
+    </script>
+
+    <div class="contenido">
+        <header>
+            <div class="image-container">
+                <img src="css/images/peru.jpg" alt="Logo" class="logo2">
+                <img src="css/images/campus.jpg" alt="Logo" class="logo1">
+                <img src="css/images/sistemas.jpeg" alt="Logo" class="logo">
+            </div>
+            <h1>Inteligencia Artificial</h1>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#incio">Inicio</a></li>
+                <li><a href="#informacion">Información</a></li>
+                <li><a href="#contenido">Contenidos</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="contenedor">
+                <section class="intro" id="separador">
+                    <h2>UNIVERSIDAD AUTONOMA DEL PERU</h2>
+                    <p>FACULTAD DE INGENIERÍA DE SISTEMAS E INFORMÁTICA</p>
+                    <p>Escuela Académico Profesional de Ingeniería de Sistemas</p>
+                </section>
+   <div id="incio"></div>
+                <section class="project-description"  id="separador">
+                    <h3>1. DESCRIPCIÓN DEL CURSO</h3>
+                    <p>La experiencia curricular de Inteligencia Artificial corresponde al área curricular de estudios
+                        específicos, es de naturaleza teórico-práctica y de carácter obligatorio. Tiene como finalidad
+                        desarrollar en el estudiante las habilidades para desarrollar e implementar sistemas con inteligencia
+                        artificial. Comprende las siguientes unidades de aprendizaje: I. Introducción y técnicas básicas de
+                        Inteligencia Artificial; II. Técnicas Avanzadas de Inteligencia Artificial.</p>
+    
+                    <h3>2. OBJETIVO</h3>
+                    <p>Al finalizar el curso, el estudiante implementa un sistema inteligente como alternativa de solución a un
+                        problema utilizando métodos y técnicas de Inteligencia Artificial, con responsabilidad, originalidad e
+                        innovación.</p>
+    <div id="informacion"></div>
+                    <h3>3. METODOLOGÍA</h3>
+                    <p>El curso se llevará a cabo a través de sesiones teóricas y prácticas. En las clases teóricas, se cubrirán los fundamentos de las técnicas básicas y avanzadas de inteligencia artificial mediante lecturas y análisis de casos. Las sesiones prácticas incluirán la implementación de algoritmos y el desarrollo de proyectos que involucren el uso de herramientas y lenguajes de programación especializados, como Python y bibliotecas de inteligencia artificial (p. ej., TensorFlow, Keras, PyTorch).
+
+                        Se fomentará el trabajo en equipo para resolver problemas reales y proponer soluciones innovadoras. La metodología también incluirá talleres, seminarios y trabajos autónomos para reforzar los conocimientos adquiridos. Además, se utilizarán entornos de simulación y desarrollo para modelar y evaluar soluciones inteligentes.
+                        
+                        El curso será evaluado continuamente mediante proyectos aplicados, presentaciones, foros de discusión, así como pruebas escritas y orales para medir el entendimiento de los conceptos teóricos.</p>
+    
+                    <h3>4. EVALUACIÓN</h3>
+                    <p>La evaluación del curso se basará en los siguientes criterios:
+
+                        Proyectos Prácticos (40%): Los estudiantes desarrollarán un proyecto grupal o individual relacionado con la implementación de un sistema inteligente. Se evaluará la originalidad, innovación y efectividad de la solución propuesta.
+                        
+                        Exámenes (30%): Se realizarán exámenes parciales y finales que evaluarán los conocimientos teóricos y prácticos adquiridos durante el curso. Estos exámenes incluirán problemas a resolver usando técnicas de IA y preguntas sobre los fundamentos teóricos.
+                        
+                        Participación y Tareas (20%): Se valorará la participación activa en las clases, talleres, y discusiones, así como la entrega puntual de tareas que involucren ejercicios y análisis de casos de IA.
+                        
+                        Presentaciones y Seminarios (10%): Los estudiantes deberán realizar presentaciones sobre temas avanzados de IA, con el objetivo de fomentar la investigación y el aprendizaje colaborativo.</p>
+                </section>
+
+                <section class="details"  id="separador">
+                    <h3>Especificaciones Generales</h3>
+                    <p><strong>Nombre del curso:</strong> Proyecto I</p>
+                    <p><strong>Profesor:</strong> Hugo Vega</p>
+                    <!-- Añade aquí el resto de la información -->
+                </section>
+    <!--
+                <section class="methodology"  id="separador">
+                    <h3>Metodología</h3>
+                    <p>El curso se desarrollará en la modalidad de orientación personalizada...</p>
+                </section> -->
+                
+                <section class="content"  id="separador">
+                    <h3>Contenido Analítico por Semanas</h3>
+                <div id="contenido"></div>
+                    <table class="courses-table"  style="margin-bottom: 10%;">
+                        <thead>
+                            <tr>
+                                <th>SEM.</th>
+                                <th>TEMA</th>
+                                <th>TRABAJOS</th>
+                                <th>ENTREGA</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Presentación del Curso</td>
+                                <td><a href="#">Trabajo 1</a></td>
+                                <td>07/09/2024</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Capítulo 1: Introducción</td>
+                                <td><a href="#">Trabajo 2</a></td>
+                                <td>14/10/2024</td>
+                            </tr>
+                            <!-- Añade más filas según sea necesario -->
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+
+            <aside>
+                <section class="professor">
+                    <h3>Profesor del Curso</h3>
+                    <img src="css/images/HUGO VEGA.jpg" alt="Hugo Vega Huerta">
+                    <p>Hugo Vega Huerta</p>
+                </section>
+        
+               <section class="groups">
+                    <h3>Integrantes</h3>
+                    <ul  style="padding: 0 0 0 5%;">
+                        <li>Jesus Tolenino V.</li>
+                        <li>Javier Flores C.</li>
+                        <li>Ana Asto Arotinco</li>
+                        <li>Alexis Velarde B.</li>
+                        <li>Giancarlo Alegria</li>
+                    </ul>
+                </section>
+        
+                <section class="plantation">
+                    <h3>Plantación de Pino</h3>
+                    <img src="css/images/pino.png" alt="Plantación de Pino">
+                    <p>Grupo 1 con el árbol plantado</p>
+                </section>
+        
+                <section class="external-links">
+                    <h3>Enlaces Externos</h3>
+                    <ul>
+                        <li><a href="https://www.autonoma.pe/evaluacion-preferente/?utm_source=pg_goog%20lm_bra7&utm_medium=cpc&utm_campaign=search%20lm_branding7&gad_source=1&gclid=Cj0KCQjw8--2BhCHARIsAF_w1gzgmqtPbQrnrNOmDyWXdffLQigrZBaMCfTcy2D5YAYTIi_XtLNpEaoaAu4AEALw_wcB">UA</a></li>
+                        <li><a href="https://cdn.prod.website-files.com/66cf3dcb409b247bdc299526/66d780bd7fcd538e0f9be762_Brochure%20100%25%20virtual%20ingenieria%20de%20sistemas%20-%20Digital.pdf">SISTEMAS</a></li>
+                        <li><a href="https://www.autonoma.pe/servicios-autonoma/centro-de-atencion-al-estudiante/">Estudiante</a></li>
+                        <!-- Añade más enlaces según sea necesario -->
+                    </ul>
+                </section>
+        
+                
+        
+                <section class="counter">
+                    <h3>Contador de Visitas</h3>
+                    <p>Visitas: <span id="contador">0</span></p>
+                </section>
+        
+            </aside>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2024 Proyecto - Universidad Autonoma del Peru</p>
+    </footer>
+</body>
+</html>

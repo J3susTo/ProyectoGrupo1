@@ -1,0 +1,1 @@
+[07-Sep-2024 02:18:33 UTC] PHP Warning:  file_put_contents(contador_visitas.txt): Failed to open stream: No such file or directory in /home2/imaginap/public_html/contador.php on line 18
